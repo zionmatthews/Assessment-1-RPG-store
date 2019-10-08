@@ -8,60 +8,60 @@ namespace Assessment1
 {
     class Inventory
     {
-        private Item[] _itemList = new Item[1];
+        private Item[] _playerList = new Item[1];
 
         public Inventory()
         {
             //Character Inventory array
-            _itemList[0] = new Weapons("Fist", 1, 1, 1, 1, "Real men will use nothing but bare hands!");
+            _playerList[0] = new Weapons("Fist", 1, 1, 1, 1, "Real men will use nothing but bare hands!");
         }
 
-        public Item[] Get_itemList
+        public Item[] Get_playerList
         {
             set
             {
-                _itemList = value;
+                _playerList = value;
             }
             get
             {
-                return _itemList;
+                return _playerList;
             }
         }
 
         public Item[] Add(Item value)
         {
-            Item[] oldlist = new Item[_itemList.Length + 1];
+            Item[] oldlist = new Item[_playerList.Length + 1];
 
-            for (int i = 0; i < _itemList.Length; i++)
+            for (int i = 0; i < _playerList.Length; i++)
             {
-                oldlist[i] = _itemList[i];
+                oldlist[i] = _playerList[i];
             }
 
             oldlist[oldlist.Length - 1] = value;
 
-            _itemList = oldlist;
+            _playerList = oldlist;
 
-            return _itemList;
+            return _playerList;
         }
 
         public Item[] Remove(int index)
         {
-            Item[] newlist = new Item[_itemList.Length - 1];
+            Item[] newlist = new Item[_playerList.Length - 1];
 
             int a = 0;
 
-            for (int i = 0; i < _itemList.Length; i++)
+            for (int i = 0; i < _playerList.Length; i++)
             {
                 if (i != index)
                 {
-                    newlist[a] = _itemList[i];
+                    newlist[a] = _playerList[i];
                     a++;
                 }
             }
 
-            _itemList = newlist;
+            _playerList = newlist;
 
-            return _itemList;
+            return _playerList;
         }
     }
 }

@@ -14,5 +14,35 @@ namespace Assessment1
         protected int _support;
         protected string _description;
         protected int _protection;
+
+        public string GetName()
+        {
+            return _name;
+        }
+
+        public int GetSupport()
+        {
+            return _support;
+        }
+
+        public string GetDescription()
+        {
+            return _description;
+        }
+
+        public int GetProtection()
+        {
+            return _protection;
+        }
+
+        public int GetDamage()
+        {
+            return _damage;
+        }
+
+        public int GetBuff()
+        {
+            return _buff;
+        }
     }
 }

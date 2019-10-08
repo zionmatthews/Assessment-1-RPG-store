@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assessment1
 {
-    class Program : Menu
+    class Program : Shop
     {
 
         static void Main(string[] args)
@@ -25,8 +25,8 @@ namespace Assessment1
 
 
 
-            Menu menu = new Menu();
-            menu.Shop();
+            Shop shop = new Shop();
+            shop.Menu();
 
 
 
