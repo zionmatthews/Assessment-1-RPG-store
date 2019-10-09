@@ -134,7 +134,7 @@ namespace Assessment1
                 {
                     if(Convert.ToInt32(choice) == (i + 1))
                     {
-                        Console.WriteLine("You sold " + PlayerInventory[i].GetName() + " " + PlayerInventory[i].GetCost() + " Zbuckz");
+                        Console.WriteLine("You sold " + PlayerInventory[i].GetName() + " " + PlayerInventory[i].GetCost() + " Zbucks");
                         shopInventory.Add(StoreInventory, PlayerInventory[i]);
                         StoreInventory = shopInventory.Get_itemList;
                         PlayerFuns = (zbucks + PlayerInventory[i].GetCost());
@@ -143,6 +143,7 @@ namespace Assessment1
                         PlayerInventory = inventory.Get_playerList;
 
                         choice = "0";
+
                     }
                 }
 
@@ -171,15 +172,23 @@ namespace Assessment1
                 {
                     if (Convert.ToInt32(choice) == (i + 1))
                     {
-                        Console.WriteLine("You bought " + StoreInventory[i].GetName() + " " + StoreInventory[i].GetCost() + " Zbucks");
-                        inventory.Add(PlayerInventory, StoreInventory[i]);
-                        PlayerInventory = inventory.Get_playerList;
-                        PlayerFuns = (zbucks - StoreInventory[i].GetCost());
-                        StoreFuns = (Store + StoreInventory[i].GetCost());
-                        shopInventory.Remove(StoreInventory, i);
-                        StoreInventory = shopInventory.Get_itemList;
+                        if(zbucks < StoreInventory[i].GetCost())
+                        {
+                            Console.WriteLine("You don't have enough.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You bought " + StoreInventory[i].GetName() + " " + StoreInventory[i].GetCost() + " Zbucks");
+                            inventory.Add(PlayerInventory, StoreInventory[i]);
+                            PlayerInventory = inventory.Get_playerList;
+                            PlayerFuns = (zbucks - StoreInventory[i].GetCost());
+                            StoreFuns = (Store + StoreInventory[i].GetCost());
+                            shopInventory.Remove(StoreInventory, i);
+                            StoreInventory = shopInventory.Get_itemList;
 
-                        choice = "0";
+                            choice = "0";
+                        }
+                        
                     }
                 }
             }
@@ -192,8 +201,8 @@ namespace Assessment1
 
             while(choice != "0")
             {
-                Console.WriteLine("You just unlocked the managers inventory!!");
-                Console.WriteLine("What are you taking?");
+                Console.WriteLine("You just unlocked the dev menu");
+                Console.WriteLine("What are you making?");
                 Console.WriteLine("0: Exit");
 
                 for(int i = 0; i < ManagerInventory.Length; i++)
