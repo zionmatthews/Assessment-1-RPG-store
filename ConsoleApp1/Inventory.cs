@@ -13,7 +13,7 @@ namespace Assessment1
         public Inventory()
         {
             //Character Inventory array
-            _playerList[0] = new Weapons("Fist", 1, 1, 1, 1, "Real men will use nothing but bare hands!");
+            _playerList[0] = new Weapons("Fist", 1, 1, 1, 1, 0, "Real men will use nothing but bare hands!");
         }
 
         public Item[] Get_playerList
@@ -28,11 +28,11 @@ namespace Assessment1
             }
         }
 
-        public Item[] Add(Item value)
+        public  Item[] Add(Item[] playerInventory, Item value)
         {
             Item[] oldlist = new Item[_playerList.Length + 1];
 
-            for (int i = 0; i < _playerList.Length; i++)
+            for(int i = 0; i < _playerList.Length; i++)
             {
                 oldlist[i] = _playerList[i];
             }
@@ -44,7 +44,7 @@ namespace Assessment1
             return _playerList;
         }
 
-        public Item[] Remove(int index)
+        public Item[] Remove(Item[] playerInventory, int index)
         {
             Item[] newlist = new Item[_playerList.Length - 1];
 
@@ -52,7 +52,7 @@ namespace Assessment1
 
             for (int i = 0; i < _playerList.Length; i++)
             {
-                if (i != index)
+                if(i != index)
                 {
                     newlist[a] = _playerList[i];
                     a++;
@@ -63,5 +63,7 @@ namespace Assessment1
 
             return _playerList;
         }
+
+        
     }
 }
