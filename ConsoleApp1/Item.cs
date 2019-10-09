@@ -14,6 +14,18 @@ namespace Assessment1
         protected int _support;
         protected string _description;
         protected int _protection;
+        protected int _cost;
+
+
+        public int GetDamage()
+        {
+            return _damage;
+        }
+
+        public int GetBuff()
+        {
+            return _buff;
+        }
 
         public string GetName()
         {
@@ -25,7 +37,7 @@ namespace Assessment1
             return _support;
         }
 
-        public string GetDescription()
+        public string Getdescription()
         {
             return _description;
         }
@@ -35,14 +47,13 @@ namespace Assessment1
             return _protection;
         }
 
-        public int GetDamage()
+        public int GetCost()
         {
-            return _damage;
+            return _cost;
         }
 
-        public int GetBuff()
-        {
-            return _buff;
-        }
+
+
     }
+
 }
