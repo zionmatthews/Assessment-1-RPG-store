@@ -8,7 +8,7 @@ namespace Assessment1
 {
     class Weapons : Item
     {
-
+        
 
         public int setDamage
         {
@@ -58,7 +58,19 @@ namespace Assessment1
             }
         }
 
-        public Weapons(string newName, int newDamage, int newProtection, int newBuff, int newSupport, string newDescription)
+        public int setcost
+        {
+            set
+            {
+                _cost = value;
+            }
+            get
+            {
+                return _cost;
+            }
+        }
+
+        public Weapons(string newName, int newDamage, int newProtection, int newBuff, int newSupport, int newCost, string newDescription)
         {
             _name = newName;
             _damage = newDamage;
@@ -66,6 +78,9 @@ namespace Assessment1
             _buff = newBuff;
             _support = newSupport;
             _description = newDescription;
+            _cost = newCost;
+
+
         }
 
     }
