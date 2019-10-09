@@ -14,12 +14,12 @@ namespace Assessment1
         {
             //The Managers inventory
 
-            managerInv[0] = new Weapons("Blood stick", 0, 15, 6, 7, "Kill things with blood.");
-            managerInv[1] = new Armor("Emraled Armor", 0, 25, 10, 8, "Green is good.");
-            managerInv[2] = new Armor("Steel Armor", 0, 40, 23, 18, "Only good for a time.");
-            managerInv[3] = new Potions("Invisable", 0, 45, 23, 16, "Hope you like ghosts.");
-            managerInv[4] = new Potions("Healing", 0, 60, 29, 25, "The ultimate potions.");
-            managerInv[5] = new Pets("Ben Drowned", 1234, 657, 246, 128, "Creepy statue that follows you around.");
+            managerInv[0] = new Weapons("Blood stick", 0, 15, 6, 7, 0, "Kill things with blood.");
+            managerInv[1] = new Armor("Emraled Armor", 0, 25, 10, 8, 0, "Green is good.");
+            managerInv[2] = new Armor("Steel Armor", 0, 40, 23, 18, 0, "Only good for a time.");
+            managerInv[3] = new Potions("Invisable", 0, 45, 23, 16, 0, "Hope you like ghosts.");
+            managerInv[4] = new Potions("Healing", 0, 60, 29, 25, 0, "The ultimate potions.");
+            managerInv[5] = new Pets("Ben Drowned", 1234, 657, 246, 128, 0, "Creepy statue that follows you around.");
 
 
 
@@ -54,7 +54,7 @@ namespace Assessment1
             return managerInv;
         }
 
-        public Item[] Remove(int index)
+        public Item[] Remove(Item[] managerInventory, int index)
         {
             Item[] newlist = new Item[managerInv.Length - 1];
 
@@ -73,5 +73,7 @@ namespace Assessment1
 
             return managerInv;
         }
+
+        
     }
 }
