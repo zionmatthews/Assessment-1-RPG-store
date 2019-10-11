@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Assessment1
 {
-    class Weapons : Item
+    class Potions : Item
     {
-        
+
 
         public int setDamage
         {
@@ -70,7 +70,7 @@ namespace Assessment1
             }
         }
 
-        public Weapons(string newName, int newDamage, int newProtection, int newBuff, int newSupport, int newCost, string newDescription)
+        public Potions(string newName, int newDamage, int newProtection, int newBuff, int newSupport, int newCost, string newDescription)
         {
             _name = newName;
             _damage = newDamage;
