@@ -81,8 +81,7 @@ namespace Assessment1
             _description = newDescription;
             _cost = newCost;
 
-            
+
         }
     }
 }
-
