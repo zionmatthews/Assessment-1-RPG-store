@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,11 +29,11 @@ namespace Assessment1
             }
         }
 
-        public  Item[] Add(Item[] playerInventory, Item value)
+        public Item[] Add(Item[] playerInventory, Item value)
         {
             Item[] oldlist = new Item[_playerList.Length + 1];
 
-            for(int i = 0; i < _playerList.Length; i++)
+            for (int i = 0; i < _playerList.Length; i++)
             {
                 oldlist[i] = _playerList[i];
             }
@@ -52,7 +53,7 @@ namespace Assessment1
 
             for (int i = 0; i < _playerList.Length; i++)
             {
-                if(i != index)
+                if (i != index)
                 {
                     newlist[a] = _playerList[i];
                     a++;
@@ -65,5 +66,6 @@ namespace Assessment1
         }
 
         
+
     }
 }
