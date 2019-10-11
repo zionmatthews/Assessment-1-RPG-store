@@ -8,34 +8,37 @@ namespace Assessment1
 {
     class Program : Shop
     {
-        
+
         static void Main(string[] args)
         {
             string name = "";
-            string choice = "";
 
+            string filepath = "c:\\Assessment 1\\Player.txt";
+
+            Shop shop = new Shop();
+            shop.
+
+            Load("Player", "Store");
+
+            Console.WriteLine("Please enter your name :");
+            name = Console.ReadLine();
+
+            Console.WriteLine("Welcome " + name);
+
+
+
+
+            Shop shopm = new Shop();
+            shopm.Menu();
 
             
-
-                Console.WriteLine("Please enter your name :");
-                name = Console.ReadLine();
-
-                Console.WriteLine("Welcome " + name);
-
-              
-
-                                            
-            Shop shop = new Shop();
-            shop.Menu();
-
-
 
 
 
         }
 
-        
 
-        
+
+
     }
 }
