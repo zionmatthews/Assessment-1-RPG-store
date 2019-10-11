@@ -8,13 +8,14 @@ namespace Assessment1
 {
     class ShopInventory
     {
+        
         private Item[] _itemList = new Item[24];
 
         public ShopInventory()
         {
             //Shop Inventory Array
 
-                               //Item   Item Name    D   P   B   S  C    Description
+            //Item   Item Name    D   P   B   S  C    Description
             _itemList[0] = new Weapons("Stone Sword", 10, 5, 0, 0, 20, "A sword made out of rock. Enjoy it while it last");
             _itemList[1] = new Weapons("Iron Axe", 20, 3, 0, 0, 30, "Does more damage then a rock sword.");
             _itemList[2] = new Weapons("CrossBow", 35, 0, 0, 0, 40, "Be like that man on walking dead.");
@@ -58,7 +59,7 @@ namespace Assessment1
             }
         }
 
-        
+
 
         public Item[] Add(Item[] storeInventory, Item value)
         {
@@ -96,6 +97,6 @@ namespace Assessment1
             return _itemList;
         }
 
-        
+       
     }
 }
